@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component matches snapshot 1`] = `
+<div
+  className="home"
+>
+  <nav
+    className="header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <div
+      className="header__nav-link"
+      onClick={[Function]}
+    >
+      Account
+    </div>
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </nav>
+  <p>
+    This is the homepage
+  </p>
+</div>
+`;
