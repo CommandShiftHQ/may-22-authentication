@@ -1,29 +1,36 @@
-import "../styles/account.css"
-import Header from "./Header"
-import { useNavigate } from "react-router-dom"
+import "../styles/account.css";
+import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    const handleClick = () => {
-        // TODO handle logging out of user
-        navigate("/")
-    }
-    return (
-        <div>
-            <Header />
-            <h1 className="center">My Account</h1>
-            <div className="container">
-                <p>Welcome username!</p>
-                <p>Here are your current details</p>
-                <ul>
-                    <li className="account__user-item">username: <b>yourUsername</b></li>
-                    <li className="account__user-item">email: <b>yourEmail</b></li>
-                </ul>
-                <button className="account__button" onClick={handleClick}>Logout</button>
-            </div>
-        </div>
-    )
-}
+  const handleClick = () => {
+    // TODO handle logging out of user
+    navigate("/");
+  };
 
-export default Account
+  return (
+    <>
+      <Header />
+      <h1 className="account__header">My Account</h1>
+      <div className="container">
+        <p>Welcome username!</p>
+        <p>Here are your current details</p>
+        <ul>
+          <li className="account__user-item">
+            username: <span>yourUsername</span>
+          </li>
+          <li className="account__user-item">
+            email: <span>yourEmail</span>
+          </li>
+        </ul>
+        <button className="account__button" onClick={handleClick}>
+          Logout
+        </button>
+      </div>
+    </>
+  );
+};
+
+export default Account;

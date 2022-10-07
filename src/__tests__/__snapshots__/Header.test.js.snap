@@ -4,7 +4,13 @@ exports[`Login form component matches snapshot 1`] = `
 <nav
   className="header"
 >
+  <div
+    className="header__username"
+  >
+    username
+  </div>
   <a
+    className="header__nav-link"
     href="/"
     onClick={[Function]}
   >
@@ -17,6 +23,7 @@ exports[`Login form component matches snapshot 1`] = `
     Account
   </div>
   <a
+    className="header__nav-link"
     href="/login"
     onClick={[Function]}
   >
