@@ -34,7 +34,8 @@ This is the solution building on the start branch that implements `jwt`, `jsonwe
 This builds on the `jwt-solution` branch, adding `bcryptjs` to create a hash of a users password and compare the entered password with the hash when a user attempts to login
 
 ### Installation
-Clone down this repo and run `npm install`. Checkout the `start` branch to try and create the solution yourself, or checkout the relevant solution branch to see an implementation.
+- Clone down this repo and run `npm install`. You will also need to create a `.env` file at the root of the project and enter a value for `REACT_APP_KEY` (this can be any string).
+- Checkout the `start` branch to try and create the solution yourself, or checkout the relevant solution branch to see an implementation.
 
 ### Checking out branches
 To checkout a branch you do not have locally but is present on the remote repository, use command `git checkout -t origin/branchname-here`, or once you have the branches locally use `git switch branchname-here`.
