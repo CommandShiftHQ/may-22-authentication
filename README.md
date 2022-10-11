@@ -1,6 +1,7 @@
-# Authorisation and Authentication demo for FE module
+# Authorisation and Authentication demo for FE module - May 22
 
-The `start` branch is your jumping off point, a simple React app has been created consisting of a `home`, `account` and `login` pages.
+## Please note!
+This repo contains the code written during the lecture itself. If you would like to follow along with the recording, you can clone down the source repo (which can be found [here](https://github.com/MCRcodes/auth-example-lecture-1.1)) and checkout the `start` branch.
 
 Here we will solve the problems of:
 - authenticating a user,
@@ -22,23 +23,8 @@ The app does not use a back end for authentication, for the purposes of demonstr
 
 ## Installation and checking out branches
 
-### Branch structure
-There are 3 branches:
-- `start`
-This is the starting point, consisting of the basic app as described at the top of this file.
-
-- `jwt-solution`
-This is the solution building on the start branch that implements `jwt`, `jsonwebtoken` and `js-cookies` to persist a users authentication status between refreshes
-
-- `bcrypt-with-jwt`
-This builds on the `jwt-solution` branch, adding `bcryptjs` to create a hash of a users password and compare the entered password with the hash when a user attempts to login
-
 ### Installation
 - Clone down this repo and run `npm install`. You will also need to create a `.env` file at the root of the project and enter a value for `REACT_APP_KEY` (this can be any string).
-- Checkout the `start` branch to try and create the solution yourself, or checkout the relevant solution branch to see an implementation.
-
-### Checking out branches
-To checkout a branch you do not have locally but is present on the remote repository, use command `git checkout -t origin/branchname-here`, or once you have the branches locally use `git switch branchname-here`.
 
 ## Available scripts
 - `npm start`
