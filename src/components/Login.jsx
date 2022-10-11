@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import {useNavigate} from "react-router-dom" ;
 import fakeLogin from "../utils/fakeLogin";
 import Header from "./Header";
 import "../styles/login.css";
+import AuthContext from "../utils/AuthContext";
+import jwtDecode from "jwt-decode";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { setUser } = useContext(AuthContext);
   const [details, setDetails] = useState({
     username: "",
     email: "",
@@ -25,7 +30,10 @@ const Login = () => {
       setError(res.error);
     } else {
       console.log("credentials are correct", "<-- login");
+      console.log(res.token);
+      setUser(jwtDecode(res.token));
       setError(null);
+      navigate("/account");
     }
   };
 
@@ -41,7 +49,9 @@ const Login = () => {
           <input id="email" onChange={handleChange} />
           <label htmlFor="password">Password</label>
           <input id="password" type="password" onChange={handleChange} />
-          <button className="login__form-button" type="submit">Login</button>
+          <button className="login__form-button" type="submit">
+            Login
+          </button>
           {error && <p className="error">{error}</p>}
         </form>
       </div>
