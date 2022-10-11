@@ -3,13 +3,16 @@ import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../utils/AuthContext";
+import Cookie from "js-cookie";
 
 const Account = () => {
-  const { user } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
     // TODO handle logging out of user
+    Cookie.remove('jwt');
+    setUser(null);
     navigate("/");
   };
 

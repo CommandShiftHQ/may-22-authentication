@@ -5,6 +5,7 @@ import Header from "./Header";
 import "../styles/login.css";
 import AuthContext from "../utils/AuthContext";
 import jwtDecode from "jwt-decode";
+import Cookie from "js-cookie";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ const Login = () => {
       console.log(res.token);
       setUser(jwtDecode(res.token));
       setError(null);
+      Cookie.set("jwt", res.token, {expires: 1 / 24});
       navigate("/account");
     }
   };
